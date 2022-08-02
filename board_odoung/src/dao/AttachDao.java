@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domain.Attach;
-import domain.Board;
-import domain.Criteria;
 import utils.DBConn;
 
 public class AttachDao {

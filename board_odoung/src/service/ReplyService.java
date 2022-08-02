@@ -1,14 +1,8 @@
 package service;
 
-import java.io.File;
 import java.util.List;
 
-import dao.AttachDao;
-import dao.BoardDao;
 import dao.ReplyDao;
-import domain.Attach;
-import domain.Board;
-import domain.Criteria;
 import domain.Reply;
 
 public class ReplyService {

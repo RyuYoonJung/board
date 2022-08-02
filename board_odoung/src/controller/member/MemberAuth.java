@@ -20,10 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-import com.google.gson.Gson;
-
 import domain.Member;
-import domain.Reply;
 import service.MemberService;
 
 @WebServlet("/member/memberAuth")

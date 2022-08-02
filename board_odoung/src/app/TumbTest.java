@@ -2,7 +2,6 @@ package app;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;

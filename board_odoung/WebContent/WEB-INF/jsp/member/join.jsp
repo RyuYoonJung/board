@@ -63,6 +63,7 @@
 												<input type="hidden" name="si" id="si">
 												<input type="hidden" name="sgg" id="sgg">
 												<input type="hidden" name="emd" id="emd">
+												<input type="hidden" name="roadAddr" id="roadAddr">
 												<input type="hidden" name="zipNo" id="zipNo">
 												<input type="hidden" name="roadFullAddr" id="roadFullAddr">
 												<input type="hidden" name="jibunAddr" id="jibunAddr">
@@ -88,14 +89,14 @@
         </div>
         <script>
         $(function() {
-        	var cp = '${pageContext.request.contextPath}';
+        	var cp = "${pageContext.request.contextPath}";
         	$("#btnSearchAddr").click(function() {
-        		var pop = window.open("${pageContext.request.contextPath}/juso","pop","width=570,height=420, scrollbars=yes, resizable=yes");
+        		var pop = window.open(cp +"/juso","pop","width=570,height=420, scrollbars=yes, resizable=yes");
         	});
         	
         	$("#btnId").click(function() {
         		console.log("clicked!");
-        		var id =  {id : $("#id").val()}
+        		var id = {id : $("#id").val()}
         		$.ajax(cp + "/member/findMember", {
         			data : id,
         			method : "get",
@@ -103,7 +104,7 @@
         				console.log(data);
         				$("#chkId").val(data);
         			}
-        		})
+        		});
         	});
         	
         	$("#id").change(function() {
@@ -120,24 +121,25 @@
         				console.log(data);
         				$("#chkEmail").val(data);
         			}
-        		})
+        		});
         	});
         	
-        	$("#Email").change(function() {
+        	$("#btnEmail").change(function() {
         		$("#chkEmail").val(1);
         	});
         	
         	$("form").submit(function() {
-        		if($("#chkId").val()!=1) {
+        		if($("#chkId").val() != "1") {
         			alert("id 중복 체크 하십셔");
         			return false;
         		}
-        		if($("#chkEmail").val()!=1) {
+        		if($("#chkEmail").val() != "1") {
         			alert("email 중복 체크 하십셔");
         			return false;
         		}
-        	})
-        })
+        	});
+        });
+        
         function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAddr, jibunAddr, zipNo, admCd, rnMgtSn, bdMgtSn,detBdNmList,bdNm,bdKdcd,siNm,sggNm,emdNm,liNm,rn,udrtYn,buldMnnm,buldSlno,mtYn,lnbrMnnm,lnbrSlno,emdNo){
             $("#si").val(siNm);
             $("#sgg").val(sggNm);

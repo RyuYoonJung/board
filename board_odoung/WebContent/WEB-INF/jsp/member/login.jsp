@@ -17,11 +17,11 @@
                                     <div class="card-body">
                                         <form method="post">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com"  name="id"/>
+                                                <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com"  name="id" value="test"/>
                                                 <label for="inputEmail">ID</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputPassword" type="password" placeholder="Password"  name="pw"/>
+                                                <input class="form-control" id="inputPassword" type="password" placeholder="Password"  name="pw" value="1234"/>
                                                 <label for="inputPassword">Password</label>
                                             </div>
                                             <div class="form-check mb-3">
